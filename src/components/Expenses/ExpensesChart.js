@@ -28,7 +28,11 @@ const ExpensesChart = (props) => {
 };
 
 ExpensesChart.propTypes = {
-  expenses: PropTypes.array,
+  expenses: PropTypes.arrayOf(PropTypes.object),
+};
+
+ExpensesChart.defaultProps = {
+  expenses: [],
 };
 
 export default ExpensesChart;
